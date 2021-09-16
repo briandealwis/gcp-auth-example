@@ -5,9 +5,9 @@ metadata:
 build:
   artifacts:
   - image: go-mod-image
-    buildpacks:
-      builder: gcr.io/buildpacks/builder:v1
-      trustBuilder: true
+    #buildpacks:
+    #  builder: gcr.io/buildpacks/builder:v1
+    #  trustBuilder: true
 deploy:
   kubectl:
     manifests:
