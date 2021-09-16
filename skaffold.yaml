@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta22
+kind: Config
+metadata:
+  name: gcp-auth-example
+build:
+  artifacts:
+  - image: go-mod-image
+    buildpacks:
+      builder: gcr.io/buildpacks/builder:v1
+      trustBuilder: true
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
